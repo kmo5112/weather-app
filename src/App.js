@@ -89,7 +89,7 @@ function App() {
             cities={cities}
             setCity={setCity}
             getCurrentLocation={getCurrentLocation}
-            selectedCity={city}
+            selectedCity={city} 
           />
         </div>
       )}
