@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 프로젝트 소개
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+세계 도시의 날씨 정보를 가져와 표시하는 웹 애플리케이션 구현
 
-## Available Scripts
+# 상세 설명
 
-In the project directory, you can run:
+1.앱이 실행되자마자 현재 위치의 날씨를 볼 수 있다. (지역, 온도, 날씨 상태)
 
-### `npm start`
+2.다른 도시의 버튼을 볼 수 있다. (현재 도시, 세계 4대 도시)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.다른 도시 버튼을 클릭하면 해당 도시의 날씨 정보를 볼 수 있다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4.검색기능을 통해서 각 국의 주요도시의 날씨 정보를 알수 있다.
 
-### `npm test`
+5.유저는 데이터가 로딩될때 로딩 스피너를 볼 수 있다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6.현재위치버튼을 누르면 다시 현재위치 기반의 날씨가 나온다.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 기능 구현
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 1.날씨 정보 표시
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+WeatherBox 컴포넌트를 사용하여 선택한 도시 또는 현재 위치의 날씨 정보를 표시합니다.
 
-### `npm run eject`
+## 2.도시 선택 및 현재 위치로 날씨 가져오기
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+WeatherButton 컴포넌트를 사용하여 여러 도시를 선택할 수 있습니다.
+"Current Location" 버튼을 클릭하면 현재 위치의 날씨 정보를 가져옵니다.
+선택한 도시의 날씨 정보는 OpenWeatherMap API를 사용하여 가져옵니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 3.데이터 로딩 표시
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+데이터를 가져오는 동안 로딩 스피너를 표시하여 사용자에게 진행 중임을 나타냅니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 4.도시 검색 기능
 
-## Learn More
+검색 입력란에 도시 이름을 입력하고 "검색" 버튼을 클릭하여 특정 도시의 날씨 정보를 가져올 수 있습니다.
+입력된 검색어를 searchCity 상태 변수에 저장하고, 이를 사용하여 도시 날씨를 가져옵니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 5.날씨 API와 통합
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+OpenWeatherMap API를 사용하여 선택한 도시 또는 현재 위치의 실시간 날씨 정보를 가져옵니다.
+API에서 반환된 데이터는 weather 상태 변수에 저장되며 화면에 표시됩니다.
 
-### Code Splitting
+## 6.데이터 단위 변환
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+OpenWeatherMap API에서 반환하는 온도를 섭씨로 변환하여 사용자에게 표시합니다.
 
-### Analyzing the Bundle Size
+## 7.오류 처리
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+API 호출 중에 발생하는 오류를 처리하고 사용자에게 오류 메시지를 표시합니다.
 
-### Making a Progressive Web App
+## 배운점 & 개선할점
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 배운점
 
-### Advanced Configuration
+1.React Hook의 기본적 개념을 이해했다.
+2.비동기 작업을 수행하는 방법과 API 호출 및 응답 처리 방법을 이해할 수 있었습니다.
+3.버튼 클릭과 입력 필드 변경과 같은 이벤트를 처리하고 이벤트 핸들러를 작성하는 방법을 배울 수 있었습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# 개선할점
 
-### Deployment
+1.날씨 정보에 대한 상세한 정보를 표시하는 것, 현재는 기온만 표시되지만 습도, 바람 속도, 날씨 상태 등을 추가
+2.현재 코드에서는 units=metric을 사용하여 기온을 섭씨로 가져오고 있으나, 사용자가 섭씨 또는 화씨 단위를 선택할 수 있도록 기능을 추가
+3.현재는 Bootstrap을 사용하고 있지만 사용자 지정 스타일링을 추가하여 더 멋진 사용자 인터페이스를 만들어 보기
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
