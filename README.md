@@ -53,6 +53,8 @@ OpenWeatherMap API에서 반환하는 온도를 섭씨로 변환하여 사용자
 ![다른 도시 클릭했을 때-2](https://github.com/kmo5112/weather-app/assets/129703278/dd2d9861-0b0d-460d-baf6-53cf5b2ad917)
 ![다른 도시 클릭했을 때-3](https://github.com/kmo5112/weather-app/assets/129703278/6454792f-21ed-437c-963e-31bf2da3227a)
 ![다른 도시 클릭했을 때-4](https://github.com/kmo5112/weather-app/assets/129703278/9128c12e-9f39-45f0-93aa-60913840ccb9)
+![검색화면](https://github.com/kmo5112/weather-app/assets/129703278/94490e75-055c-456e-8d29-9748a7e35e3e)
+
 
 # 기능 구현 화면 gif
 ![전체 기능](https://github.com/kmo5112/weather-app/assets/129703278/39af528c-3332-4340-83ea-ff61a1b7c7fd)
