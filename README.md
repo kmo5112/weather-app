@@ -47,6 +47,12 @@ API에서 반환된 데이터는 weather 상태 변수에 저장되며 화면에
 
 OpenWeatherMap API에서 반환하는 온도를 섭씨로 변환하여 사용자에게 표시합니다.
 
+## 7.오류 처리
+
+API 호출 중에 발생하는 오류를 처리하고 사용자에게 오류 메시지를 표시합니다.
+
+
+
 # 기능 구현 화면
 ![capture_현재 위치,날씨 정보](https://github.com/kmo5112/weather-app/assets/129703278/6a15b81b-fe62-46ef-a704-d39a36e0c7f0)
 ![다른 도시 클릭했을 때-1](https://github.com/kmo5112/weather-app/assets/129703278/e8e5eed8-85e7-405e-a2ec-f2f1b8a91aee)
@@ -59,9 +65,7 @@ OpenWeatherMap API에서 반환하는 온도를 섭씨로 변환하여 사용자
 # 기능 구현 화면 gif
 ![전체 기능](https://github.com/kmo5112/weather-app/assets/129703278/39af528c-3332-4340-83ea-ff61a1b7c7fd)
 
-## 7.오류 처리
 
-API 호출 중에 발생하는 오류를 처리하고 사용자에게 오류 메시지를 표시합니다.
 
 # 배운점 & 개선할점
 
